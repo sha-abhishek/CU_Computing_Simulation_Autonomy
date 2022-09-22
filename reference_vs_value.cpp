@@ -1,8 +1,10 @@
 /*  Nick Sweeting 2013/10/09
     References vs Values in C++
     MIT License
-    Takes input and removes puctuation and spaces, using two different methods.
+    Takes input and removes puctuation, using two different methods.
     It is referred from: https://github.com/pirate/Cpp-Data-Structures/
+    
+    Abhishek Sharma 2022/09/22
 */
 
 #include <stdlib.h>
@@ -50,7 +52,7 @@ char* modifyAndCopy(char* raw_input, char* empty_input) {
 char* modifyInPlace(char *raw_input) {
     // complete the functions here ...
     int a = strlen(raw_input);
-    char* mod_input = raw_input; //mod_array;
+    char* mod_input = raw_input; 
     
     int j = 0;
     for (int i = 0; i < a; i++){
@@ -60,8 +62,6 @@ char* modifyInPlace(char *raw_input) {
             mod_input[j] = raw_input[i];
             j++;
         }
-        //cout << "value of i: " << i << endl;
-        //cout << "value of j: " << j << endl;
     }
     for (int k=j; k<a; k++){
         mod_input[k] = {0};
