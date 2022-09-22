@@ -4,6 +4,8 @@
     g++ Vectors.cpp -o main && ./main
     Example of using vectors to store a list of students and their GPAs.
     It is referred from: https://github.com/pirate/Cpp-Data-Structures/
+    
+    Abhishek Sharma 2022/09/22
 */
 
 #include <stdlib.h>
