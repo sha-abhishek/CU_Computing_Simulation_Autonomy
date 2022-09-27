@@ -74,7 +74,7 @@ int main() {
     char raw_input[80] = {0};
     cout << "Please input something with punctuation in it: ";
     cin.getline(raw_input,80);
-    cout << "length of raw input: " << strlen(raw_input) << endl;
+    //cout << "length of raw input: " << strlen(raw_input) << endl;
 
     char mod_array[strlen(raw_input)] = {0};
     cout << "Modify and Copy: " << endl;
