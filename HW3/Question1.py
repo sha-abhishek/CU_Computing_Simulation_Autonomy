@@ -1,7 +1,7 @@
 def solution(list, num): 
     a=0 
     b=0 
-    '''type in your solution, find a and b in array that a+b=num'''
+    '''find a and b in array that a+b=num'''
     for i in range(len(list)-1):
         for j in range(i+1,len(list)):
             a = list[i]
