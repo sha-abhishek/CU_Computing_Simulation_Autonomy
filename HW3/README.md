@@ -1,1 +1,2 @@
-## HW3 
+## AUE8930 HW3 
+Solution to the questions on data structures, search & sort algorithms 
