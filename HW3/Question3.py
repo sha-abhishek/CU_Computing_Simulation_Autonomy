@@ -41,11 +41,11 @@ class Solution:
         return addlist
 
 
-""" 
-Uncomment to test the code
+
+""" #Uncomment to test the code
 
 l1 = ListNode(val = 2)
-l1.next = ListNode(val=4)
+l1.next = ListNode(val=6)
 l1.next.next = ListNode(val=3)
 
 
@@ -53,10 +53,11 @@ l2 = ListNode(val=5)
 l2.next = ListNode(val=6)
 l2.next.next = ListNode(val=4)
 
-ad = Solution.addTwoNumbers(0,l1,l2)
+ad = Solution()
+add = ad.addTwoNumbers(l1,l2)
 
-print(l1.next.next.val,l1.next.val,l1.val, " + ",l2.next.next.val,l2.next.val,l2.val, "=" , ad.next.next.val,ad.next.val,ad.val)  
+print(l1.next.next.val,l1.next.val,l1.val, " + ",l2.next.next.val,l2.next.val,l2.val, "=" , add.next.next.val,add.next.val,add.val)  
+ """
 
-"""
 
 
