@@ -11,7 +11,7 @@ imgplot = plt.imshow(im)
 
 # Apply bilateral filter
 
-bilateral = cv2.bilateralFilter(img, 15, 75,75)
+bilateral = cv2.bilateralFilter(img, 20, 80, 80)
 
 # Save the output. 
 cv2.imwrite('bilateral.png',bilateral) 
