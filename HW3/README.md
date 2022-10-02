@@ -5,11 +5,11 @@ Q6 bilateral filter implementation:
 
 input image:
 
-![](<inputq6.png>)
+![](<inputq6.png>)  ![](<bilateral.png>)
 
 output image:
 
-![](<bilateral.png>)
+
 
 
 
