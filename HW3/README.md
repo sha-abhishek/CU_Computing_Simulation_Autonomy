@@ -2,8 +2,7 @@
 Solution to the questions on data structures, search & sort algorithms 
 
 Q6 bilateral filter implementation:
-!(input image)[inputq6.png]
-!output image)[bilateral.png]
+![](images/table%201-input.png)
 
 
 
