@@ -5,7 +5,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 def solution(root):
-    '''type in your solution'''
+    """ Using DFS for node traversal """
     depth = 0
     if root == None:
         return depth
