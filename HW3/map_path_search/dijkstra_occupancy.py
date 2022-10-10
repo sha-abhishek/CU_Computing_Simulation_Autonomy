@@ -107,8 +107,8 @@ def dijkstra_occupancy(start_m, goal_m, gmap, movement='8N', occupancy_cost_fact
 
             # add node to front if it was not visited before and is not an obstacle
             if (not gmap.is_visited_idx(new_pos)) and (not gmap.is_occupied_idx(new_pos)):
-                #potential_function_cost = gmap.get_data_idx(new_pos)*occupancy_cost_factor
-                new_cost = cost + deltacost #+ potential_function_cost
+                potential_function_cost = gmap.get_data_idx(new_pos)*occupancy_cost_factor
+                new_cost = cost + deltacost + potential_function_cost
                 #new_total_cost_to_goal = new_cost + dist2d(new_pos, goal) + potential_function_cost
 
                 heappush(front, (new_cost, new_pos, pos))

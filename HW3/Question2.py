@@ -4,6 +4,7 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
+    
 def solution(root):
     """ Using DFS for node traversal """
     depth = 0

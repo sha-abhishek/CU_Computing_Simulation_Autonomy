@@ -12,7 +12,7 @@ start_node = (360.0, 330.0)
 goal_node = (285.0, 86.0)
 filename = 'map_path_search/maps/example_map_binary.png'
 # filename = 'maps/example_map_occupancy.png'
-qtmap = QuadTreeMap.from_png(filename, cell_size=1, occupancy_threshold=0.6, tile_capacity=100)
+qtmap = QuadTreeMap.from_png(filename, cell_size=10, occupancy_threshold=0.6, tile_capacity=100)
 click = 0
 
 def plan(event):
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     window.title("occupance map")
 
-    img = PhotoImage(file="map_path_search/examples/maps/example_map_binary.png")
+    img = PhotoImage(file="map_path_search/maps/example_map_binary.png")
     cv = Canvas(window, width=canvas_width, height=canvas_height)
     cv.pack(side='top', fill='both', expand='yes')
     cv.create_image(0, 0, image=img, anchor='nw')

@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     # set a start and an end node (in meters)
     start_node = (360.0, 330.0)
-    goal_node = (200.0, 330.0)
+    goal_node = (200.0, 30.0)
 
     # run A*
     path, path_px = a_star_occupancy(start_node, goal_node, gmap, movement='4N')
