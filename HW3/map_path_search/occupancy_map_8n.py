@@ -35,7 +35,7 @@ def plan(event):
         path, path_px = a_star_occupancy(start_node, goal_node, copy.deepcopy(gmap), movement='8N')
         if path_px:
             ## plot resulting path in pixels over the map
-            plot_on_canvas(path_px, cv, color="yellow", width=4)
+            plot_on_canvas(path_px, cv, color="yellow", width=8)
         else:
             print('Goal is not reachable')
 
@@ -43,7 +43,7 @@ def plan(event):
         path, path_px = dijkstra_occupancy(start_node, goal_node, copy.deepcopy(gmap), movement='8N')
         if path_px:
             # plot resulting path in pixels over the map
-            plot_on_canvas(path_px, cv, color="purple", width=2)
+            plot_on_canvas(path_px, cv, color="purple", width=4)
         else:
             print('Goal is not reachable')
 

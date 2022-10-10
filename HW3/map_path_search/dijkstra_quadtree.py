@@ -14,6 +14,7 @@ def _get_movements_8n(qtm: quadtreemap.QuadTreeMap , tile: quadtreemap.Tile):
     neighborList = qtm.quadtree.tileIntersect(quadtreemap.BoundingBox(tile.boundary.x0-1, tile.boundary.y0-1,
                                             tile.boundary.width+2, tile.boundary.height+2))
     movements = [(til, quadtreemap.Point.disOf2Points(tile.getCenter(), til.getCenter())) for til in neighborList]
+    
     return movements
 
 def dijkstra_quadtree(start_m, goal_m, qtm, movement='8n', occupancy_cost_factor=3):

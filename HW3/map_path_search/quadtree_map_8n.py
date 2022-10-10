@@ -3,7 +3,7 @@ sys.path.append('..')
 from tkinter import *
 from quadtreemap import QuadTreeMap
 from dijkstra_quadtree import dijkstra_quadtree
-# from a_star_quadtree import a_star_quadtree
+from a_star_quadtree import a_star_quadtree
 
 
 canvas_width = 425
@@ -29,13 +29,13 @@ def plan(event):
         cv.create_oval( event.x-5, event.y-5, event.x+5, event.y+5, fill = "red" )
 
         # uncomment below for 'a_star_quadtree'
-        # path, path_px = a_star_quadtree(start_node, goal_node, qtmap, movement='8N')
-        # if path_px:
-            ## plot resulting path in pixels over the map
-            ## plot_on_canvas(path_px, cv, color="yellow", width=4)
-            # draw_listOfTiles_on_canvas(path_px, cv, color="yellow", width=3)
-        # else:
-            # print('Goal is not reachable')
+        path, path_px = a_star_quadtree(start_node, goal_node, qtmap, movement='8N')
+        if path_px:
+            # plot resulting path in pixels over the map
+            # plot_on_canvas(path_px, cv, color="yellow", width=4)
+            draw_listOfTiles_on_canvas(path_px, cv, color="yellow", width=3)
+        else:
+            print('Goal is not reachable')
 
         # uncomment below for 'dijkstra_quadtree'
         path, path_px = dijkstra_quadtree(start_node, goal_node, qtmap, movement='8N')
