@@ -15,12 +15,12 @@ def solution(root):
         depth_right = solution(root.right)
 
         if depth_right > depth_left:
-            depth = depth_right + 1
+            depth = depth_right 
             
         else:
-            depth = depth_left + 1
+            depth = depth_left 
         
-    return depth
+    return depth+1
 
 a15=TreeNode(15)
 a7=TreeNode(7)
