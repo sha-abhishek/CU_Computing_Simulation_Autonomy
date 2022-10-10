@@ -17,17 +17,17 @@ class Solution:
                         continue
                     else:
                         return False
-            print(br_stack)
+            #print(br_stack)
 
         if len(br_stack)==0:
             return True
         else:
             return False 
 
-
+# test strings below
 input_str = '[](({}))[][]'
-input_str2 = '[}'
-input_str3 = '(())jsjs{jj[sj'
+input_str2 = '}{()()'
+input_str3 = '(())jsjs{jj}[s]j'
 
 sol = Solution()
 print(sol.isValid(input_str3))
