@@ -38,13 +38,13 @@ def plan(event):
             print('Goal is not reachable')
 
         # uncomment below for 'dijkstra_quadtree'
-        path, path_px = dijkstra_quadtree(start_node, goal_node, qtmap, movement='8N')
-        if path_px:
-            # plot resulting path in pixels over the map
-            # plot_on_canvas(path_px, cv, color="purple", width=2)
-            draw_listOfTiles_on_canvas(path_px, cv, color="purple", width=3)
-        else:
-            print('Goal is not reachable')
+        # path, path_px = dijkstra_quadtree(start_node, goal_node, qtmap, movement='8N')
+        # if path_px:
+        #     # plot resulting path in pixels over the map
+        #     # plot_on_canvas(path_px, cv, color="purple", width=2)
+        #     draw_listOfTiles_on_canvas(path_px, cv, color="purple", width=3)
+        # else:
+        #     print('Goal is not reachable')
 
 
 def plot_on_canvas(path, cv, color="yellow", width=3):
