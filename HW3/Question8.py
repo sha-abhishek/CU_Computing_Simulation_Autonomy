@@ -1,21 +1,37 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
-        l = len(s)
-        counter = 0
         hash_t = {}
-        for i in s:
-            hash_t[i] = i
-
-        for j in t:
-            if hash_t[j]:
-                counter = counter+1
-
-        if counter == l:
-            return True
-        else:
+        if len(t) != len(s):
             return False
 
+        else:
+            for i in range(len(s)):
+                if s[i] in hash_t:
+                    hash_t[s[i]] += 1
+
+                else:
+                    hash_t[s[i]] = 1
+
+            for j in range(len(t)):
+                if t[j] in hash_t:
+                    hash_t[t[j]] -= 1
+
+                else:
+                    return False
+
+            key = hash_t.keys()
+
+            for k in key:
+                if hash_t[k] != 0:
+                    return False
+
+            return True 
+
+
+
+
+# testing out the solution
 
 s = 'anagram'
 t = 'margana'
@@ -26,5 +42,5 @@ v = 'kat'
 test1 = Solution()
 test2 = Solution()
 
-test1.isAnagram(s,t)
-test2.isAnagram(u,v)
+print(test1.isAnagram(s,t))
+print(test2.isAnagram(u,v))

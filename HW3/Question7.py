@@ -4,14 +4,20 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-    def nodeval(self):
-        return self.val
     
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
-        if not root==None:
-            print(root.nodeval())
-        return
+        valid_sum = False
+        if root.val == sum and root.left == None and root.right == None:
+            return True
+
+        if not root.left == None:
+            valid_sum = valid_sum  or Solution().hasPathSum(root.left, sum - root.val)
+
+        if not root.right == None:
+            valid_sum  = valid_sum or Solution().hasPathSum(root.right, sum - root.val)
+
+        return valid_sum 
 
 
 a15=TreeNode(15)
@@ -27,4 +33,4 @@ a3.left=a9
 a3.right=a20
 
 s = Solution()
-s.hasPathSum(a3,12)
+print(s.hasPathSum(a3,43))
