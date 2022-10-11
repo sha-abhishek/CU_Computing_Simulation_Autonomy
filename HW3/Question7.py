@@ -33,4 +33,6 @@ a3.left=a9
 a3.right=a20
 
 s = Solution()
-print(s.hasPathSum(a3,43))
+print(s.hasPathSum(a3,30))
+
+
