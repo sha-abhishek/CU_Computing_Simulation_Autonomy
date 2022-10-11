@@ -59,7 +59,7 @@ def a_star_quadtree(start_m, goal_m, qtm, movement='8n', occupancy_cost_factor=3
             if til.tile_points:
                 continue
             if til not in path_record:
-                candidates.put((quadtreemap.Point.disOf2Points(curr_node.getCenter(),goal.getCenter()) + dis + deltacost, dis + deltacost, curr_node, til))
+                candidates.put((quadtreemap.Point.disOf2Points(curr_node.getCenter(),goal.getCenter()) + dis + deltacost*occupancy_cost_factor, dis + deltacost*occupancy_cost_factor, curr_node, til))
     # reconstruct path backwards (only if we reached the goal)
     path = []
     path_idx = []
